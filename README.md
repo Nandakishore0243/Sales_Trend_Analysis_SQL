@@ -1,8 +1,12 @@
 # 📊 Sales Trend Analysis Using SQL
 
+> 📌 A beginner-friendly SQL project to analyze sales trends using aggregation functions.
+
+---
+
 ## 📌 Objective
 
-Analyze **monthly revenue** and **order volume** using SQL aggregation techniques.
+Analyze **monthly revenue** and **order volume** using SQL aggregation techniques to understand sales trends over time.
 
 ---
 
@@ -17,7 +21,7 @@ Analyze **monthly revenue** and **order volume** using SQL aggregation technique
 
 Table: `online_sales`
 
-**Columns:**
+### Columns:
 
 * `order_id` – Unique ID for each order
 * `order_date` – Date of order
@@ -28,24 +32,41 @@ Table: `online_sales`
 
 ## ⚙️ SQL Concepts Used
 
-* GROUP BY
-* SUM()
-* COUNT(DISTINCT)
-* ORDER BY
-* strftime()
+* `GROUP BY`
+* `SUM()`
+* `COUNT(DISTINCT)`
+* `ORDER BY`
+* `strftime()` (date extraction)
 
 ---
 
 ## 📈 Analysis Performed
 
-* Extracted year and month from order date
-* Calculated monthly revenue
-* Calculated order volume per month
-* Sorted results chronologically
+* Extracted **year and month** from order date
+* Calculated **monthly revenue**
+* Calculated **order volume per month**
+* Sorted results in chronological order
+
+---
+
+## 🧾 SQL Query
+
+```sql
+SELECT 
+    strftime('%Y', order_date) AS year,
+    strftime('%m', order_date) AS month,
+    SUM(amount) AS total_revenue,
+    COUNT(DISTINCT order_id) AS order_volume
+FROM online_sales
+GROUP BY year, month
+ORDER BY year, month;
+```
 
 ---
 
 ## 📊 Results
+
+Final output of the SQL query:
 
 | Year | Month | Total Revenue | Order Volume |
 | ---- | ----- | ------------- | ------------ |
@@ -58,10 +79,12 @@ Table: `online_sales`
 
 ## 📸 Output
 
-See `output.png` for the query result screenshot.
+Refer to `output.png` for the query result screenshot.
 
 ---
 
 ## ✅ Conclusion
 
-SQL aggregation functions help analyze sales trends efficiently and provide meaningful business insights.
+This project demonstrates how SQL aggregation functions can be used to analyze sales data and identify trends effectively. It provides a simple yet powerful approach to data analysis using SQL.
+
+---
