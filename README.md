@@ -2,53 +2,66 @@
 
 ## 📌 Objective
 
-The goal of this project is to analyze monthly revenue and order volume
-using SQL aggregation techniques.
+Analyze **monthly revenue** and **order volume** using SQL aggregation techniques.
+
+---
 
 ## 🛠️ Tools Used
 
--   SQLite (DB Browser for SQLite)\
--   SQL
+* SQLite (DB Browser for SQLite)
+* SQL
+
+---
 
 ## 🗂️ Dataset
 
-Table: online_sales
+Table: `online_sales`
 
-### Columns:
+**Columns:**
 
--   order_id → Unique ID for each order\
--   order_date → Date of order\
--   amount → Revenue generated\
--   product_id → Product identifier
+* `order_id` – Unique ID for each order
+* `order_date` – Date of order
+* `amount` – Revenue generated
+* `product_id` – Product identifier
+
+---
 
 ## ⚙️ SQL Concepts Used
 
--   GROUP BY\
--   SUM()\
--   COUNT(DISTINCT)\
--   ORDER BY\
--   strftime()
+* GROUP BY
+* SUM()
+* COUNT(DISTINCT)
+* ORDER BY
+* strftime()
+
+---
 
 ## 📈 Analysis Performed
 
--   Extracted year and month from order date\
--   Calculated monthly revenue\
--   Calculated order volume per month\
--   Sorted results
+* Extracted year and month from order date
+* Calculated monthly revenue
+* Calculated order volume per month
+* Sorted results chronologically
+
+---
 
 ## 📊 Results
 
-  Year   Month   Revenue   Orders
-  ------ ------- --------- --------
-  2024   01      800       2
-  2024   02      900       2
-  2024   03      1400      2
-  2024   04      1400      2
+| Year | Month | Total Revenue | Order Volume |
+| ---- | ----- | ------------- | ------------ |
+| 2024 | 01    | 800           | 2            |
+| 2024 | 02    | 900           | 2            |
+| 2024 | 03    | 1400          | 2            |
+| 2024 | 04    | 1400          | 2            |
+
+---
 
 ## 📸 Output
 
-Refer to output.png
+See `output.png` for the query result screenshot.
+
+---
 
 ## ✅ Conclusion
 
-SQL aggregation helps analyze sales trends effectively.
+SQL aggregation functions help analyze sales trends efficiently and provide meaningful business insights.
